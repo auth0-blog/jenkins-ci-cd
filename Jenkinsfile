@@ -26,4 +26,9 @@ npx mocha --reporter mocha-jenkins-reporter'''
       }
     }
   }
+  post {
+    always {
+        junit 'test-results.xml'
+    }
+  }
 }
